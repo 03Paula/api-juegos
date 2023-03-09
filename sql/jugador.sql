@@ -18,7 +18,7 @@ CREATE TABLE `jugador` (
   `id` bigint NOT NULL auto_increment,
   `nombre` varchar(45) character set utf8 collate utf8_unicode_ci NOT NULL default '',
   `avatar` varchar(45) character set utf8 collate utf8_unicode_ci NOT NULL default '',
-  `id_equipo` bigint NOT NULL default '0',
+  `id_equipo` bigint NOT NULL default null,
   `puntos` int(40) NOT NULL default '0',
   `last_mod` datetime NOT NULL default '0000-00-00 00:00:00',
   PRIMARY KEY  (`id`),
