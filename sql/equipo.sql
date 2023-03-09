@@ -18,3 +18,11 @@ CREATE TABLE `equipo` (
   `last_mod` datetime NOT NULL default '0000-00-00 00:00:00',
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=5915 DEFAULT CHARSET=utf8mb4;
+
+-- Datos de prueba.
+
+INSERT INTO `api-juego`.equipo (nombre_equipo, puntos, logo, last_mod)
+VALUES ('programadores', 22, DEFAULT, '2023-01-03 21:18:27');
+
+INSERT INTO `api-juego`.equipo (nombre_equipo, puntos, logo, last_mod)
+VALUES ('ratones', 12, DEFAULT, '2021-09-13 21:19:36');

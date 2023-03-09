@@ -26,3 +26,24 @@ CREATE TABLE `jugador` (
     FOREIGN KEY (id_equipo)
     REFERENCES equipo(id)
 ) ENGINE=MyISAM AUTO_INCREMENT=5915 DEFAULT CHARSET=utf8mb4;
+
+-- Datos de prueba.
+
+INSERT INTO `api-juego`.jugador (nombre, avatar, id_equipo, puntos, last_mod)
+VALUES ('Paco', DEFAULT, 5915, 11, '2023-03-09 18:26:39');
+
+
+INSERT INTO `api-juego`.jugador (nombre, avatar, id_equipo, puntos, last_mod)
+VALUES ('Paca', DEFAULT, 5915, 1, '2023-03-03 18:27:31');
+
+
+INSERT INTO `api-juego`.jugador (nombre, avatar, id_equipo, puntos, last_mod)
+VALUES ('Paula', DEFAULT, 5916, 3, '2023-03-04 23:28:15');
+
+
+INSERT INTO `api-juego`.jugador (nombre, avatar, id_equipo, puntos, last_mod)
+VALUES ('Javier', DEFAULT, 5916, 20, '2023-01-25 18:29:21');
+
+
+INSERT INTO `api-juego`.jugador (nombre, avatar, id_equipo, puntos, last_mod)
+VALUES ('Adrian', DEFAULT, 5917, 3, '2022-06-07 06:30:19');
