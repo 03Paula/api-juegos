@@ -11,8 +11,8 @@ public class ModPartidaDTO {
     private Long intentos;
     private String dificultad;
     private Long puntos;
-    private Long jugadorId;
-    private Long juegoId;
+    private Long id_juego;
+    private Long id_jugador;
 
     private String palabra;
 }

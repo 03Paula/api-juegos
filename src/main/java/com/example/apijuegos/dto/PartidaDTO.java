@@ -10,8 +10,8 @@ import java.time.LocalDateTime;
 public class PartidaDTO {
     private Long id;
     private LocalDateTime fecha_hora;
-    private Long jugadorId;
-    private Long juegoId;
+    private Long id_juego;
+    private Long id_jugador;
     private String palabra;
     private String dificultad;
     private Long intentos;

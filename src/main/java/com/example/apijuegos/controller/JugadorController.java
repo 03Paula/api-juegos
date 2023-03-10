@@ -82,8 +82,8 @@ public class JugadorController {
         Equipo equipo = null;
         njugador.setNombre(nuevojug.getNombre());
         njugador.setAvatar(nuevojug.getAvatar());
-        if(nuevojug.getEquipoId() != null){
-            equipo = equipoRepository.findById(nuevojug.getEquipoId()).orElse(null);
+        if(nuevojug.getId_equipo() != null){
+            equipo = equipoRepository.findById(nuevojug.getId_equipo()).orElse(null);
         }
         njugador.setEquipo(equipo);
         njugador.setPuntos(nuevojug.getPuntos());
@@ -102,8 +102,8 @@ public class JugadorController {
     @PutMapping("/jugador/{id}")
     public Jugador updateJugador(@RequestBody ModJugadorDTO newJugador, @PathVariable Long id){
         Equipo equipo = null;
-        if (newJugador.getEquipoId() != null){
-            equipo = equipoRepository.findById(newJugador.getEquipoId()).orElse(null);
+        if (newJugador.getId_equipo() != null){
+            equipo = equipoRepository.findById(newJugador.getId_equipo()).orElse(null);
         }
 
         final Equipo nEquipo = equipo;

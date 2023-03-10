@@ -8,14 +8,12 @@ import java.time.LocalDateTime;
 
 @Setter @Getter
 public class CreatePartidaDTO {
-    private Long juegoId;
-    private Long jugadorId;
+    private Long id_juego;
+    private Long id_jugador;
     private String palabra;
     private Long intentos;
     private String dificultad;
     private Long puntos;
     private LocalDateTime fecha_hora;
-
-
 
 }

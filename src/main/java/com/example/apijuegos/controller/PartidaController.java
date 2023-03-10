@@ -104,9 +104,9 @@ public class PartidaController {
      * @return nueva partida.
      */
     @PostMapping("/partidas")
-    public ResponseEntity<?> newPartida(@PathVariable CreatePartidaDTO nuevapartida){
-        Jugador jugador = jugadorRepository.findById(nuevapartida.getJugadorId()).orElseThrow(() -> new JugadorNotFoundException(nuevapartida.getJugadorId()));
-        Juego juego = juegoRepository.findById(nuevapartida.getJuegoId()).orElseThrow(() -> new JuegoNotFoundException(nuevapartida.getJuegoId()));
+    public ResponseEntity<?> newPartida(@RequestBody CreatePartidaDTO nuevapartida){
+        Jugador jugador = jugadorRepository.findById(nuevapartida.getId_jugador()).orElseThrow(() -> new JugadorNotFoundException(nuevapartida.getId_jugador()));
+        Juego juego = juegoRepository.findById(nuevapartida.getId_juego()).orElseThrow(() -> new JuegoNotFoundException(nuevapartida.getId_juego()));
         Partida npartida = new Partida();
         npartida.setPalabra(nuevapartida.getPalabra());
         npartida.setFecha_hora(LocalDateTime.now());
@@ -128,8 +128,8 @@ public class PartidaController {
      */
     @PutMapping("/partida/{id}")
     public Partida updatePartida(@RequestBody ModPartidaDTO modPartida, @PathVariable Long id){
-        final Jugador jugador = jugadorRepository.findById(modPartida.getJugadorId()).orElseThrow(() -> new JugadorNotFoundException(id));
-        final Juego juego = juegoRepository.findById(modPartida.getJuegoId()).orElseThrow(() -> new JuegoNotFoundException(modPartida.getJuegoId()));
+        final Jugador jugador = jugadorRepository.findById(modPartida.getId_jugador()).orElseThrow(() -> new JugadorNotFoundException(id));
+        final Juego juego = juegoRepository.findById(modPartida.getId_juego()).orElseThrow(() -> new JuegoNotFoundException(modPartida.getId_juego()));
 
         return partidaRepository.findById(id).map(partida -> {
             partida.setPalabra(modPartida.getPalabra());
