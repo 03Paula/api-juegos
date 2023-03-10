@@ -25,7 +25,6 @@ public class Jugador {
     private String avatar;
 
     @ManyToOne
-    @NotFound(action = NotFoundAction.IGNORE)
     @JoinColumn(name="id_equipo")
     private Equipo equipo = null;
 

@@ -16,18 +16,17 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Entity
 public class Partida {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
-    @NotFound(action = NotFoundAction.IGNORE)
     @JoinColumn(name="id_jugador")
     @JsonBackReference
     private Jugador jugador;
 
     @ManyToOne
-    @NotFound(action = NotFoundAction.IGNORE)
     @JoinColumn(name="id_juego")
     @JsonBackReference
     private Juego juego;
