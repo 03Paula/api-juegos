@@ -12,10 +12,8 @@ public class CreateJugadorDTO {
 
     private String avatar;
 
-    private Long equipoId;
+    private Long id_equipo;
 
     private Long puntos;
-
-    private LocalDateTime last_mod;
 
 }
