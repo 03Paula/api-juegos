@@ -76,7 +76,7 @@ public class JugadorController {
      * @param nuevojug Datos del jugador nuevo.
      * @return jugador nuevo.
      */
-    @PostMapping("/jugadores")
+    @PostMapping("/jugador")
     public ResponseEntity<?> newJugador(@RequestBody CreateJugadorDTO nuevojug){
         Jugador njugador = new Jugador();
         Equipo equipo = null;

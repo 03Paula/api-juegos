@@ -68,7 +68,7 @@ public class EquipoController {
      * @param nuevoequipo Datos del nuevo equipo.
      * @return equipo nuevo.
      */
-    @PostMapping("/equipos")
+    @PostMapping("/equipo")
     public ResponseEntity<?> newEquipo(@RequestBody Equipo nuevoequipo){
         return ResponseEntity.status(HttpStatus.CREATED).body(equipoRepository.save(nuevoequipo));
     }

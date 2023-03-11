@@ -103,7 +103,7 @@ public class PartidaController {
      * @param nuevapartida
      * @return nueva partida.
      */
-    @PostMapping("/partidas")
+    @PostMapping("/partida")
     public ResponseEntity<?> newPartida(@RequestBody CreatePartidaDTO nuevapartida){
         Jugador jugador = jugadorRepository.findById(nuevapartida.getId_jugador()).orElseThrow(() -> new JugadorNotFoundException(nuevapartida.getId_jugador()));
         Juego juego = juegoRepository.findById(nuevapartida.getId_juego()).orElseThrow(() -> new JuegoNotFoundException(nuevapartida.getId_juego()));

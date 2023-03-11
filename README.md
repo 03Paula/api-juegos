@@ -1,11 +1,10 @@
 # api-juegos
 ## Partida
 
-| Endpoint                | Resultado                                                    | Método |
-|-------------------------|--------------------------------------------------------------| :----: |
-| `/partidas`             | Mostrar todas las partidas                                   |  GET   |
-| `/partidas`             | Añadir una partida                                           |  POST  |
-| `/partida/{id}`         | Mostrar la partida con el id `{id}`                          |  GET   |
-| `/partida/{id}`         | Eliminar una partida                                         | DELETE |
-| `/partida/{id}`         | Modificar una partida                                        |  PUT   |
-| `/partida/jugador/{id}` | Mostrar las partidas con los jugadores que tengan esa `{id}` |  GET   |
+| Endpoint                      | Resultado                                                    | Método |
+|-------------------------------|--------------------------------------------------------------|:------:|
+| `/palabras`                   | Mostrar todas las palabras que se encuentran en el fichero   |  GET   |
+| `/palabra/aleatoria`          | Mostrar una palabra random                                   |  GET   |
+| `/palabras/contienen/{cadena}` | Mostrar la/s palabra/s que contienen esa cadena              |  GET   |
+| `/palabras/empiezan/{cadena}` | Mostrar la/s palabra/s que empiezan por esa cadena           |  GET   |
+| `/palabras/terminan/{cadena}` | Mostrar la/s palabra/s que terminan por esa cadena           |  GET   |

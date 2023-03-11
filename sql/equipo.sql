@@ -27,3 +27,6 @@ VALUES ('programadores', 22, DEFAULT, '2023-01-03 21:18:27');
 
 INSERT INTO `api-juego`.equipo (nombre_equipo, puntos, logo, last_mod)
 VALUES ('ratones', 12, DEFAULT, '2021-09-13 21:19:36');
+
+INSERT INTO `api-juego`.equipo (nombre_equipo, puntos, logo, last_mod)
+VALUES ('calvos', 9, DEFAULT, '2021-08-13 21:19:36');
